@@ -23,7 +23,7 @@ Diese Implementation ist Teil einer Maturitätsarbeit zum Thema "Blockchainbasie
 
 ### 1. Circom-Compiler und snarkjs installieren (Circom, o. D.-b)
 
-\`\`\`bash
+```bash
 # 1. Rust installieren (falls noch nicht vorhanden)
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 
@@ -35,31 +35,31 @@ cargo install --path circom
 
 # 3. snarkjs installieren
 npm install snarkjs circomlibjs core-js
-\`\`\`
+```
 
 
 ### 2. Schaltkreis kompilieren (Circom, o. D.-a)
 
-\`\`\`bash
+```bash
 circom circuit.circom --r1cs --wasm --sym
-\`\`\`
+```
 
 ### 3. Trusted Setup (Circom, o. D.-c)
 
-\`\`\`bash
+```bash
 snarkjs powersoftau new bn128 12 pot12_0000.ptau
 snarkjs powersoftau contribute pot12_0000.ptau pot12_final.ptau
 snarkjs groth16 setup circuit.r1cs pot12_final.ptau circuit_0000.zkey
 snarkjs zkey export verificationkey circuit_0000.zkey verification_key.json
-\`\`\`
+```
 
 ### 4. Merkle-Tree erstellen, Beweis generieren und verifizieren
 
-\`\`\`bash
+```bash
 node build_merkle_tree.js
 node create_proof.js
 node verify.js
-\`\`\`
+```
 
 
 ## Einschränkungen
