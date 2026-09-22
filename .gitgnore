@@ -1,0 +1,17 @@
+# Circom-Compiler (siehe README)
+circom/
+
+# Node
+node_modules/
+
+# Circom
+circuit_js/
+circuit.r1cs
+
+# Trusted Setup
+*.ptau
+circuit_0000.zkey
+
+# Ergebnisse einzelner Testläufe
+proof.json
+publicSignals_root_and_n.json
