@@ -67,8 +67,8 @@ node verify.js
 Die Implementierung ist bewusst vereinfacht und dient zur Veranschaulichung des Kernmechanismus. 
 -	Die Identität steht in unverschlüsselter Form, im Stil „Max Mustermann“.
 -	Der Sicherheitsfaktor wird weggelassen. Dadurch könnte man sich also für eine andere Person ausgeben.
--	Es gibt keinen Identifier, da nach einer erfolgreichen Identifizierung keine weiteren Aktionen, wie Stimmabgabe und Speicherung, ausgeführt werden
--	Die Wahlinformationen sind nicht Teil der Implementation
+-	Es gibt keinen Identifier, da nach einer erfolgreichen Identifizierung keine weiteren Aktionen, wie Stimmabgabe und Speicherung, ausgeführt werden.
+-	Die Wahlinformationen sind nicht Teil der Implementation.
 -	Der Beweis wird nicht auf einem Smart-Contract, sondern lokal mithilfe eines JavaScript-Skripts verifiziert.
 
 
