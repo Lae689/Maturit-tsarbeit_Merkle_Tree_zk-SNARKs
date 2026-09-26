@@ -1,7 +1,7 @@
 # Maturitätsarbeit_Merkle_Tree_zk-SNARKs
 Anonyme Authentifizierung mithilfe von zk-SNARKs und Merkle-Tree im Rahmen einer Maturitätsarbeit zu blockchainbasierten Wahlsystemen
 
-Diese Implementation ist Teil einer Maturitätsarbeit zum Thema "Blockchainbasierte Wahlsysteme" und dient der Veranschaulichung des Kernmechanismus einer anonymen Authentifizierung mithilfe von zk-SNARK. Die Idee basiert auf dem Konzept von Tang, Yang, Tian und Yuan (2023), wurde aber für diese Arbeit vereinfacht.
+Diese Implementation ist Teil einer Maturitätsarbeit zum Thema "Blockchainbasierte Wahlsysteme" und dient der Veranschaulichung des Kernmechanismus einer anonymen Authentifizierung mithilfe von zk-SNARKs. Die Idee basiert auf dem Konzept von Tang, Yang, Tian und Yuan (2023), wurde aber für diese Arbeit vereinfacht.
 
 
 ## Verwendete Tools
