@@ -9,20 +9,20 @@ let F;
 //Merkle-Tree bauen
 function build_tree(v, merkle_tree, i, depth,n){
 
-     if(i >= (Math.pow(2, depth)-1)){ //Leaf-Nodes erkenen
+    if(i >= (Math.pow(2, depth)-1)){ //Leaf-Nodes erkenen
         let a = i-(Math.pow(2,depth)-1); //Index in der Wählerliste, der zum Leaf-Node gehört
 
         if(a<n){
-            //Name in eine BigInt Zahl Konvertieren
+            //Name in eine BigInt Zahl konvertieren
             const encoder = new TextEncoder();
-            const voter_unit8array = encoder.encode(v[a]); //String -> Unit8Array
-            const voter_hex = "0x" + voter_unit8array.toHex(); //Unit8Array -> hex
+            const voter_uint8array = encoder.encode(v[a]); //String -> Uint8Array
+            const voter_hex = "0x" + voter_uint8array.toHex(); //Uint8Array -> hex
             const voter_bigInt = BigInt(voter_hex); //hex -> bigInt
             
-            //Namen Hashen und als Leaf in den Merkle-Tree einfügen
+            //Namen hashen und als Leaf in den Merkle-Tree einfügen
             merkle_tree[i] = poseidon([voter_bigInt]);
         }
-        else merkle_tree[i] = poseidon([0]); //lehrer Knoten
+        else merkle_tree[i] = poseidon([0]); //leerer Knoten
 
         return;
     }
@@ -30,7 +30,7 @@ function build_tree(v, merkle_tree, i, depth,n){
     build_tree(v, merkle_tree, i*2+1, depth, n); //Die linke Seite berechnen
     build_tree(v, merkle_tree, i*2+2, depth, n); //Die rechte Seite berechnen
 
-    merkle_tree[i] = poseidon([merkle_tree[i*2+1], merkle_tree[i*2+2]]); //merkle_tree[i] = hash(child-left, child2-right)
+    merkle_tree[i] = poseidon([merkle_tree[i*2+1], merkle_tree[i*2+2]]); //merkle_tree[i] = hash(child-left, child-right)
     
     //Format für spätere Speicherung ändern
     merkle_tree[i*2+1] = F.toObject(merkle_tree[i*2+1]).toString();
@@ -57,7 +57,7 @@ async function main(){
 
     merkle_tree[0] = F.toObject(merkle_tree[0]).toString(); //Format vom Root ändern
 
-    //Ausgabe erstellen
+    //Ausgabe erstellen und speichern
     const output = {
         size: n,
         depth: depth,
