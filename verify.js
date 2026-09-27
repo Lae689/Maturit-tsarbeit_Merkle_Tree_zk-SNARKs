@@ -2,7 +2,7 @@ const snarkjs = require('snarkjs')
 const fs = require("fs").promises;
 
 async function verify(){
-  //Benötigten Dateien einlesen
+  //Benötigte Dateien einlesen
   const proof = JSON.parse( await fs.readFile("proof.json",'utf8')); //proof einlesen
   const publicSignals = JSON.parse( await fs.readFile("publicSignals_root_and_n.json",'utf8')); //Public Input (Root und Länge der Wählerliste) einlesen
   const vKey = JSON.parse( await fs.readFile("verification_key.json",'utf8')); //verification key einlesen
