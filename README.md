@@ -33,8 +33,8 @@ cd circom
 cargo build --release
 cargo install --path circom
 
-# 3. snarkjs installieren
-npm install snarkjs circomlibjs core-js
+# 3. Snarkjs installieren
+npm install -g snarkjs
 ```
 
 
