@@ -44,7 +44,7 @@ npm install snarkjs circomlibjs core-js
 circom circuit.circom --r1cs --wasm --sym
 ```
 
-### 3. Trusted Setup (Circom, o. D.-c)
+### 3. Trusted Setup (Circom, o. D.-c) FEHLER!
 
 ```bash
 snarkjs powersoftau new bn128 12 pot12_0000.ptau
