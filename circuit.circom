@@ -15,7 +15,7 @@ template Merkle_Proof(depth){
 	index[0] <== 0;
 	for(var i = 0; i < depth; i++)
 	{
-		index[i+1] <== index[i]*2 + (2-direction[i]);
+		index[i+1] <== index[i]*2 + (2-direction[depth-1-i]);
 	}
 
 	//Kontrollieren, ob der Index inerhalb der Wählerliste ist
