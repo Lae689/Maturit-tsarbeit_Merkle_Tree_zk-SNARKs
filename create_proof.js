@@ -54,8 +54,8 @@ async function generateProof(){
 	const{proof} = await snarkjs.groth16.fullProve(
 		{
 		 hash_name: hash_name, //gehashter Name
-		 path: path_merkle, //Alle Nachbarknoten des Pfades
-		 direction: dir_merkle, //Nachbar links oder Rechts
+		 path: path_merkle, //alle Nachbarknoten des Pfades
+		 direction: dir_merkle, //Nachbar links oder rechts
 		 root: merkle_root, //Root
 		 len_vote_list: len_vote_list //Länge der Wählerliste
 		},
