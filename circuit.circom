@@ -19,7 +19,7 @@ template Merkle_Proof(depth){
 	}
 
 	//Kontrollieren, ob der Index innerhalb der Wählerliste ist
-	signal first <== 2**depth - 1; //Erstes Element in der untersten Ebene des Merkle-Trees
+	signal first <== 2**depth - 1; //erstes Element in der untersten Ebene des Merkle-Trees
 	
 	component gr = GreaterEqThan(depth+2);
 	gr.in[0] <== index[depth];
@@ -49,7 +49,7 @@ template Merkle_Proof(depth){
 		a[i+1] <== poseidon[i].out;
 	}
 
-	root === a[depth]; //Kontrollieren ob der berechnete Root identisch zum gegebenen ist
+	root === a[depth]; //Kontrollieren, ob der berechnete Root identisch zum gegebenen ist
 }
 
 component main {public [root, len_vote_list]} = Merkle_Proof(3);
