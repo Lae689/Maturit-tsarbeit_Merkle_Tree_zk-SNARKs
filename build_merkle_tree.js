@@ -9,7 +9,7 @@ let F;
 //Merkle-Tree bauen
 function build_tree(v, merkle_tree, i, depth,n){
 
-    if(i >= (Math.pow(2, depth)-1)){ //Leaf-Nodes erkenen
+    if(i >= (Math.pow(2, depth)-1)){ //Leaf-Nodes erkennen
         let a = i-(Math.pow(2,depth)-1); //Index in der Wählerliste, der zum Leaf-Node gehört
 
         if(a<n){
@@ -27,8 +27,8 @@ function build_tree(v, merkle_tree, i, depth,n){
         return;
     }
 
-    build_tree(v, merkle_tree, i*2+1, depth, n); //Die linke Seite berechnen
-    build_tree(v, merkle_tree, i*2+2, depth, n); //Die rechte Seite berechnen
+    build_tree(v, merkle_tree, i*2+1, depth, n); //die linke Seite berechnen
+    build_tree(v, merkle_tree, i*2+2, depth, n); //die rechte Seite berechnen
 
     merkle_tree[i] = poseidon([merkle_tree[i*2+1], merkle_tree[i*2+2]]); //merkle_tree[i] = hash(child-left, child-right)
     
