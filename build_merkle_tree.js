@@ -49,7 +49,7 @@ async function main(){
 
     let n = voter_list.size;
     let v = voter_list.voters;
-    let merkle_tree = new Array(4*n).fill(0);
+    let merkle_tree = new Array(2*n-1).fill(0);
     let depth = Math.ceil(Math.log2(n));
 
     //Merkle-Tree bauen
