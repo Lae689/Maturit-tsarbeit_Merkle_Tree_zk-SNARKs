@@ -61,7 +61,7 @@ async function generateProof(){
 		},
 
 		"circuit_js/circuit.wasm",
-		"circuit_0000.zkey"
+		"circuit_0001.zkey"
 	);
 
 	//Proof speichern
