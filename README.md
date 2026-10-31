@@ -50,8 +50,10 @@ circom circuit.circom --r1cs --wasm --sym
 snarkjs powersoftau new bn128 12 pot12_0000.ptau
 snarkjs powersoftau contribute pot12_0000.ptau pot12_0001.ptau --name="First contribution" -v
 snarkjs powersoftau prepare phase2 pot12_0001.ptau pot12_final.ptau -v
+
 snarkjs groth16 setup circuit.r1cs pot12_final.ptau circuit_0000.zkey
-snarkjs zkey export verificationkey circuit_0000.zkey verification_key.json
+snarkjs zkey contribute circuit_0000.zkey circuit_0001.zkey --name="1st Contributor Name" -v
+snarkjs zkey export verificationkey circuit_0001.zkey verification_key.json
 ```
 
 ### 4. Merkle-Tree erstellen, Beweis generieren und verifizieren
