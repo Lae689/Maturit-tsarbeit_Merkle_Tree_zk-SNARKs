@@ -70,7 +70,7 @@ node verify.js
 Die Implementierung ist bewusst vereinfacht und dient zur Veranschaulichung des Kernmechanismus. 
 -	Die Identität steht in unverschlüsselter Form, im Stil „Max Mustermann“.
 -	Der Sicherheitsfaktor wird weggelassen. Dadurch könnte man sich also für eine andere Person ausgeben.
--	Es gibt keinen Identifier, da nach einer erfolgreichen Identifizierung keine weiteren Aktionen, wie Stimmabgabe und Speicherung, ausgeführt werden.
+-	Es gibt keinen Identifier, da nach einer erfolgreichen Identifizierung keine weiteren Aktionen wie Stimmabgabe und Speicherung ausgeführt werden.
 -	Die Wahlinformationen sind nicht Teil der Implementation.
 -	Der Beweis wird nicht auf einem Smart-Contract, sondern lokal mithilfe eines JavaScript-Skripts verifiziert.
 
@@ -83,4 +83,4 @@ Circom. (o. D.-b). *Installation*. Circom 2 Documentation. Internet Archive.  Ab
 
 Circom. (o. D.-c). *Proving circuits*. Circom 2 Documentation. Internet Archive.  Abgerufen am 21. September 2026, von  https://web.archive.org/web/20250904081027/https://docs.circom.io/getting-started/proving-circuits/
 
-Tang, W., Yang, W., Tian, X., & Yuan, S. (2023). Distributed anonymous e-voting method based on smart contract authentication. *Electronics, 12*(9), 1968. https://doi.org/10.3390/electronics12091968
+Tang, W., Yang, W., Tian, X., & Yuan, S. (2023). Distributed anonymous e-voting method based on smart contract authentication. *Electronics, 12*(9), Artikel 1968. https://doi.org/10.3390/electronics12091968
